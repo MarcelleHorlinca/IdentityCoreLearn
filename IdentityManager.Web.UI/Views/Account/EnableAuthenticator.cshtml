@@ -1,0 +1,17 @@
+﻿@model IdentityManager.Core.Data.ViewModel.TwoFactorAuthenticationViewModel
+
+<p>
+    please, emter the code below in your authenticator app.
+</p>
+<p>
+    @Model.Token
+</p>
+
+<form method="post">
+    <input  class="hidden" asp-for="Token"/>
+    <div class="form-group">
+        EnterCode:<input type="text" class="form-control" asp-for="Code"/> 
+        <br/>
+        <<button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
